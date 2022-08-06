@@ -49,7 +49,8 @@ Changes in filename interpretation are noted below.
 Interpretation of the filename based on http://dunbrack.fccc.edu/Guoli/pisces_download.php: 
 
 * `pc25`:  the percentage identity cutoff is 25%  (or `pc30` for 30% identity cutoff)
-* `res2.0`: he resolution cutoff is 2.0 angstroms (or `res2.5` for 2.5 angstrom cutoff)
+* `res2.0`: the resolution cutoff is 2.0 angstroms
+   *  The resolution cutoff now consists of a range, e.g., `res0.0-2.5` and `res0.0-3.0` were used here for 2.5 and 3.0 angstrom resolution cutoffs.
 * `R0.25`: the R-factor cutoff is 0.25
 * `d180531`: datestamp (updated to `d2022_07_23`, which was the latest available)
 * `chains9099`: the number of sequences in the file (updated to `chains8275`, `chains10904`, or `chains15023` depending on the specific combination of identity and resolution cutoffs)
