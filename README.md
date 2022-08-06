@@ -2,7 +2,7 @@
 
 This repository contains a collection of protein sequences and their annotated secondary structures, all derived from the [RCSB-PDB](https://www.rcsb.org/).  The repository is a fork of the original [pdb-secondary-strucutre repository](https://github.com/zyxue/pdb-secondary-structure) by [zyxue](https://github.com/zyxue).  Thanks to zyxue for the code to gather and annotate protein sequences with their secondary structure.
 
-The intend of this repository is to update the original dataset which was created in 2018.  Additionally, the dataset is expanded to have more sequences by relaxing some constraints on structure resolution and the degree of similarity between proteins.
+The intention of this repository is to update the original dataset which was created in 2018.  Additionally, the dataset is expanded to have more sequences by relaxing some constraints on structure resolution and the degree of similarity between proteins.
 
 Following is the orignal README text with updates noted.
 
