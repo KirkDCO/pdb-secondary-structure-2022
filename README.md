@@ -38,7 +38,7 @@ If the above URL doesn't work, update it according to http://dunbrack.fccc.edu/G
 
 The PISCES data files have changed formats and naming slightly since the original work was done.  The notebooks in this repository have been updated with the current file names, but the code operates in the same way.
 
-One paritcular update is that the PISCES data files do not contain any sequences shorter that 40 amino acids.  This was a likely source of problems previously with the same sequence appearing multiple times but with different secondary structure annotations.  Additoinally, these shorter sequences were likely less informative for model dvelopment.
+One particular update is that the PISCES data files do not contain any sequences shorter that 40 amino acids.  This was a likely source of problems previously with the same sequence appearing multiple times but with different secondary structure annotations.  Additoinally, these shorter sequences were likely less informative for model dvelopment.
 
 Additional updates included relaxing the percentage identity cutoff from 25% to 30% as well as relaxing the resolution cutoff from 2.0 angstroms to 2.5 angstroms.  Neither of these relaxed constraints should overtly affect the quality of the data, but do increase the number of example sequences substantially from ~9000 sequences (ranging in length from 20 to 1632 amino acids) to ~13,400 sequences (ranging in length from 40 to 2128 amino acids).
 
@@ -52,9 +52,9 @@ Interpretation of the filename based on http://dunbrack.fccc.edu/Guoli/pisces_do
 * `res2.0`: the resolution cutoff is 2.0 angstroms
    *  The resolution cutoff now consists of a range, e.g., `res0.0-2.5` and `res0.0-3.0` were used here for 2.5 and 3.0 angstrom resolution cutoffs.
 * `R0.25`: the R-factor cutoff is 0.25
-* `d180531`: datestamp (updated to `d2022_07_23`, which was the latest available)
+* `d180531`: datestamp (updated to `d2022_07_23`, which was the latest available at the time of the update)
 * `chains9099`: the number of sequences in the file (updated to `chains8275`, `chains10904`, or `chains15023` depending on the specific combination of identity and resolution cutoffs)
-* `len40-10000`: a new filename inclusion signifying the minimum and maximum sequence lengths. 
+* `len40-10000`: a new filename inclusion at the time of the update signifying the minimum and maximum sequence lengths. 
 
 In addition:
 
@@ -69,7 +69,7 @@ The `inclNOTXRAY` and `inclCA` filename portions did not appear to exist any lon
 
 * `Xray`: X-ray crystal structures only. (This was used for the datasets here.)
 * `Xray+EM`: X-ray crystal structures and cryo-electron microscopy.
-* 'Xray+Nmr+EM`: X-ray crystal structures, cryo-electron micronscopy, and NMR.
+* `Xray+Nmr+EM`: X-ray crystal structures, cryo-electron microscopy, and NMR.
 * `noBrks`: Files marked with `noBrks` consisted of no chain breaks.
 
 ---
