@@ -13,6 +13,10 @@ This repo records details of how the protein secondary structure data is curated
 
 #### Download secondary structure data
 
+*23.01.22*
+
+I found that this file has not been updated since July 2020 when PDB shutdown certain access servers.  That file still exists and can be downloaded, but it is clearly very far out of date.  I cannot find a substitute for this file at this point.
+
 ```
 DATE_STAMP=$(date  +'%Y-%m-%d')
 wget https://cdn.rcsb.org/etl/kabschSander/ss.txt.gz -O ${DATE_STAMP}-ss.txt.gz
