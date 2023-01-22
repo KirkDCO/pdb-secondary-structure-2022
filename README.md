@@ -97,3 +97,5 @@ The final files were then gzipped in order to conserve space and can be found in
 https://www.kaggle.com/alfrandom/protein-secondary-structure
 
 #### Updated Kaggle page:
+
+https://www.kaggle.com/datasets/kirkdco/protein-secondary-structure-2022
