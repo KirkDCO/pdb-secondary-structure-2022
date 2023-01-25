@@ -8,14 +8,21 @@ Following is the orignal README text with updates noted.
 
 ----
 
-This repo records details of how the protein secondary structure data is curated.
+*Update 23.01.22*
 
+After finding that the ss.txt file I had downloaded in August 2022 actually dated to July 2020, and not being able to find a substitute for the ss.txt file, I wrote new code to derive the sequence and secondary structure files myself.
+
+* download_culled_pdb.py - creates a list of PDB accession numbers that are found in the culled PDB lists and then downloads them all.  For this update, ~15,500 files were downloaded and processed.
+
+* CreateCleanedSS.py - creates the sequence - secondary structure .csv files.  Prevoius versions started with the ss.txt, merged it with the cullpdb* files, and then converted them to the target .csv files.
+
+* create_runner.bash - simple bash script to parallelize the structure file creation process.  Each cullpdb* file is processed, PDB files accessed from a specified directory, and partial files written.  Final files need to be concatenated.
+
+* deprecated/ - old code is moved here.
+
+**Original README from 22.08.06**
 
 #### Download secondary structure data
-
-*23.01.22*
-
-I found that this file has not been updated since July 2020 when PDB shutdown certain access servers.  That file still exists and can be downloaded, but it is clearly very far out of date.  I cannot find a substitute for this file at this point.
 
 ```
 DATE_STAMP=$(date  +'%Y-%m-%d')
@@ -27,7 +34,7 @@ wget https://cdn.rcsb.org/etl/kabschSander/ss.txt.gz -O ${DATE_STAMP}-ss.txt.gz
 python transform_ss_txt_to_csv.py -i ${DATE_STAMP}-ss.txt.gz
 ```
 ---
-*UPDATE 2022:*
+*Update 22.08.06*
 
 Both the original ss.txt.gz and the transformed ss.txt.gz files are in the `raw-data` folder along with the 2018 files from the original repository.
 
@@ -44,7 +51,7 @@ wget http://dunbrack.fccc.edu/Guoli/culledpdb_hh/cullpdb_pc25_res2.0_R0.25_d1805
 If the above URL doesn't work, update it according to http://dunbrack.fccc.edu/Guoli/culledpdb_hh/.
 
 ---
-*UPDATE 2022:*
+*Update 22.08.06*
 
 The PISCES data files have changed formats and naming slightly since the original work was done.  The notebooks in this repository have been updated with the current file names, but the code operates in the same way.
 
@@ -73,7 +80,7 @@ In addition:
 
 ---
 
-*UPDATE 2022:*
+*Update 22.08.06*
 
 The `inclNOTXRAY` and `inclCA` filename portions did not appear to exist any longer.  Rather, there were:
 
