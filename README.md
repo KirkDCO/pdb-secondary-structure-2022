@@ -8,6 +8,10 @@ Following is the orignal README text with updates noted.
 
 ----
 
+*Update 23.02.04*
+
+The data associated with the 6M12 structure was found to lack protein sequence, SST-3, and SST-8.  This only appears to affect the 2022-12-17-pdb-intersect-pisces_pc30_r2.5.csv file.  This is likely due to an error with DSSP's calculation of secondary structures and there is not verification in the current code to catch this error.  To reproduce the entire dataset minus this one protein would require downloading all PDB structures and rerunning the code.  Instead, the single line with the error was removed using `grep -v 6M12 2022-12-17-pdb-intersect-pisces_pc30_r2.5.csv > temp.csv`.  The `temp.csv` file was checked and copied over the original file.
+
 *Update 23.01.22*
 
 After finding that the ss.txt file I had downloaded in August 2022 actually dated to July 2020, and not being able to find a substitute for the ss.txt file, I wrote new code to derive the sequence and secondary structure files myself.
